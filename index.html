@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+
+<html>
+<head>
+	<title>Metropolis Algorithm</title>
+	<meta charset="UTF-8">
+</head>
+<body >
+	
+	<div class=title-bar>
+		<h1>Ising model simulated with Metropolis Algorithm</h1>
+	</div>
+	
+	<div style="border:1px solid #000000;">
+		<p> Change temperature of the system with the slider </p>
+		<input type="range" min="0" max="300" value="226" class="slider" id="slider" autocomplete="off">
+		<p id="temperatureText">T = </p>
+		<p>Reset temperature to critical point (T = 2.26918531421) <button id="buttonReset">Reset</button></p>	
+	</div>
+	
+	<br>
+	<div style="display:inline-block">
+		<p>Ising system:</p>
+		<canvas id="canvasMain" width="512px" height="512px" style="border:1px solid #000000;"></canvas>
+	</div>
+	<div style="display:inline-block">
+		<p>Number of positive spin (the green line at the half):</p>
+		<canvas id="canvasGraph" width="512px" height="512px" style="border:1px solid #000000;"></canvas>
+	</div>
+	
+	<script src="world.js"></script>
+	<script src="draw.js"></script>
+	<script src="events.js"></script>
+
+</body>
+</html>
